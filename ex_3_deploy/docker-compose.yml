@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  awscli:
+    image: jhaoheng/docker-awscli
+    container_name: awscli
+    environment: 
+      - AWS_DEFAULT_REGION=us-east-1
+    volumes: 
+      - ./.aws:/root/.aws
+    tty: true

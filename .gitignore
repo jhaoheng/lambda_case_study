@@ -1,0 +1,4 @@
+ex*/lambda/task/*
+!.gitkeep
+go.sum
+.aws

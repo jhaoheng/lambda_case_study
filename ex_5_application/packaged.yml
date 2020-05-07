@@ -1,0 +1,75 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'api
+
+  '
+Globals:
+  Function:
+    Timeout: 5
+Resources:
+  apiget:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: s3://lambda20200508/6977d00fe1e12e7972623197bd9c0f19
+      Handler: getHandler
+      Runtime: go1.x
+      Tracing: Active
+      Events:
+        CatchAll:
+          Type: Api
+          Properties:
+            Path: /hello/get
+            Method: GET
+      Environment:
+        Variables:
+          PARAM1: VALUE
+  apipost:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: s3://lambda20200508/6977d00fe1e12e7972623197bd9c0f19
+      Handler: postHandler
+      Runtime: go1.x
+      Tracing: Active
+      Events:
+        CatchAll:
+          Type: Api
+          Properties:
+            Path: /hello/post
+            Method: POST
+      Environment:
+        Variables:
+          PARAM1: VALUE
+  apidel:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: s3://lambda20200508/6977d00fe1e12e7972623197bd9c0f19
+      Handler: delHandler
+      Runtime: go1.x
+      Tracing: Active
+      Events:
+        CatchAll:
+          Type: Api
+          Properties:
+            Path: /hello/del
+            Method: DELETE
+      Environment:
+        Variables:
+          PARAM1: VALUE
+  cusEvent:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: s3://lambda20200508/6977d00fe1e12e7972623197bd9c0f19
+      Handler: cuseventHandler
+      Runtime: go1.x
+      Tracing: Active
+Metadata:
+  AWS::ServerlessRepo::Application:
+    Name: my-app
+    Description: hello app
+    Author: user1
+    SpdxLicenseId: Apache-2.0
+    Labels:
+    - tests
+    HomePageUrl: https://github.com/jhaoheng/my-app-project
+    SemanticVersion: 0.0.1
+    SourceCodeUrl: https://github.com/jhaoheng/my-app-project
