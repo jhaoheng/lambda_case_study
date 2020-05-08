@@ -75,12 +75,6 @@ Resources:
       Handler: s3eventHandler
       Runtime: go1.x
       Tracing: Active
-      Events:
-        S3Event:
-          Type: S3
-          Properties:
-            Bucket: my-bucket-20200508 # bucket must be created in the same template
-            Events: s3:ObjectCreated:* # support events of s3 : 
 
 Metadata:
   AWS::ServerlessRepo::Application:
