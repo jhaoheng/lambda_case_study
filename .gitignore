@@ -1,5 +1,7 @@
 ex*/lambda/task/*
 ex*/lambda/opt/*
+ex_5_application/release/*
+ex_5_application/packaged.yml
 !.gitkeep
 go.sum
 .aws

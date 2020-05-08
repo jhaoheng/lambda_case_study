@@ -1,3 +1,6 @@
+# 目的
+- 建立 layer 與 func, 在本地端測試
+
 # build 
 ## 注意
 1. 因為 osx golang build plugin 跨平台到 linux 的 c complier 有 issue, 故在 docker complier

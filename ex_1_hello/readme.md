@@ -1,3 +1,6 @@
+# 目的
+- 在本地端建立 hello Lambda, 並且在本地端測試
+
 ## build binary
 - `GOOS=linux go build -o ./lambda/task/main ./app/main.go`
 

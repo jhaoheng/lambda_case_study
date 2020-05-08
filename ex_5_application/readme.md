@@ -1,3 +1,9 @@
+# 目的
+1. 在本地端建立 Lambda func 與 apiGateway, 並且測試
+2. 測試, 模擬 event : cus_event & s3Event
+3. 部署到雲端
+4. 在雲端測試
+
 # doc
 - SAM : https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md
 - golang event 
@@ -16,6 +22,8 @@
 
 
 # use sam to invoke lambda
+> `make build`
+
 ## invoke api
 - `sam local invoke "apiget"`
 

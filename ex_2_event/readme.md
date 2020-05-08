@@ -1,3 +1,7 @@
+# 目的
+- 建立客製化的 event, 傳送給 Lambda
+- 在本地端測試
+
 ## build
 
 `GOOS=linux go build -o ./lambda/task/main ./app/main.go`

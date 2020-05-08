@@ -1,3 +1,6 @@
+# 目的
+- 部署 lambda func 到 Cloud, AWS Lambda 
+
 # binary
 - main : 為 ex_2 的 binary
 - main.zip
