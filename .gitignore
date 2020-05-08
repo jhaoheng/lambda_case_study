@@ -1,4 +1,5 @@
 ex*/lambda/task/*
+ex*/lambda/opt/*
 !.gitkeep
 go.sum
 .aws
