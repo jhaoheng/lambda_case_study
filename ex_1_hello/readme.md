@@ -1,5 +1,4 @@
 ## build binary
-- `cd ex_1`
 - `GOOS=linux go build -o ./lambda/task/main ./app/main.go`
 
 ## 本地測試 : `docker run` 
