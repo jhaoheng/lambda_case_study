@@ -5,7 +5,7 @@
     - example : https://github.com/aws/aws-lambda-go/tree/master/events
 
 
-# start
+# use sam to test
 1. `make build`
 2. 建立 : `sam local start-api --region us-east-1`
 3. 測試 : 
@@ -15,7 +15,7 @@
 4. `make clean`
 
 
-# test
+# use sam to invoke lambda
 ## invoke api
 - `sam local invoke "apiget"`
 
