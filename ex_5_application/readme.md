@@ -34,7 +34,16 @@
 - `sam local generate-event s3 put --bucket my-bucket-20200508 --key hello | sam local invoke "s3Event" --event -`
 
 
-# deploy
-1. 設定 bucket polict : https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-template-publishing-applications.html
-2. 建立 packaged.yaml : `sam package --template-file template.yaml --output-template-file packaged.yml --s3-bucket {bucket}`
-3. 發布版本 : `sam publish --template packaged.yml --region us-east-1`
+# use sam to deploy
+## 因以下原因, 必須在本地安裝 awscli & sam
+1. 因為 sam 無法指定 aws 憑證資源 (只能設定 profile, 預設讀取同一個路徑)
+2. 且 sam 無適當的 docker image
+
+## 上傳 SAM 到 SAR, 並且從 SAR 中部署資源
+> 因有用到 s3, 故需要設定 bucket policy : https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-template-publishing-applications.html
+
+1. 建立 packaged.yaml : `sam package --template-file template.yaml --output-template-file packaged.yml --s3-bucket {bucket}`
+2. 發布版本 : `sam publish --template packaged.yml --region us-east-1`
+3. 到 AWS SAR, 查看資源資訊
+4. 點選部署
+5. 查看 ApiGateway, 測試
