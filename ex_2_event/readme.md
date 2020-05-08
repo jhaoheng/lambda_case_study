@@ -14,6 +14,6 @@
     - `curl -d '{"IsTest":true}' http://localhost:9001/2015-03-31/functions/myfunction/invocations`
 4. 調用 lambda, 使用 awscli : 
     - `docker exec -it awscli /bin/bash`
-    - `aws --endpoint-url http://lambda:9001 --region us-east-1 lambda invoke --function-name {handler} --no-sign-request --payload '{"IsTest":true}' /dev/stdout`
+    - `aws --endpoint-url http://lambda:9001 --region us-east-1 lambda invoke --function-name main --no-sign-request --payload '{"IsTest":true}' /dev/stdout`
     - `exit`
 5. 結束 `docker-compose -f ./lambda/docker-compose.yml down`
