@@ -12,14 +12,15 @@ func pluginActive() error {
 	if err != nil {
 		return err
 	}
-	Hello_layer_1, err := pluginModule.Lookup("Hello_layer_1")
+	HelloLayer1, err := pluginModule.Lookup("HelloLayer1")
 	if err != nil {
 		return err
 	}
-	Hello_layer_1.(func())()
+	HelloLayer1.(func())()
 	return nil
 }
 
+// Handler -
 func Handler(ctx context.Context) error {
 	return pluginActive()
 }
